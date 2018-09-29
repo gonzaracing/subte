@@ -1,19 +1,17 @@
-
-// Cargar el modulo HTTP
-var http = require('http');
+var express = require('express'),
+    fs = require('fs'),
+    app = express();
  
-// Configurar una respuesta HTTP para todas las peticiones
-function onRequest(request, response) {
-  console.log("Peticion Recibida.");
-  response.writeHead(200, {"Content-Type": "text/html"});
-  response.write("Hola Mundo");
-  response.end();
-}
+var app = express();
  
-var server = http.createServer(onRequest);
+var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
  
-// Escuchar al puerto 8080
-server.listen(8080);
  
-// Poner un mensaje en la consola
-console.log("Servidor funcionando en http://localhost:8080/");
+app.get('/', function(req, res) {
+    res.send('Hello from NodeJS  at '+ new Date());
+});
+ 
+ 
+app.listen(8080, ip);
+ 
+module.exports = app;
