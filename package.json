@@ -19,7 +19,7 @@
   },
  
   "scripts" :  { 
-    "start" :  "node ./src/Server.js" 
+    "start" :  "node Server.js" 
   } 
   
 }

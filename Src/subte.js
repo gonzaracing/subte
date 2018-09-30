@@ -1,7 +1,7 @@
 
 
 
-setInterval( ConsumeApiSubte,1000);
+setInterval( ConsumeApiSubte,10000);
 
 
 function ConsumeApiSubte()
