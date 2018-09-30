@@ -5,7 +5,7 @@ var express = require('express'),
 var app = express();
  
 var ip = process.env.IP || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
- 
+var server_port= process.env.OPENSHIFT_NODEJS_PORT || 8080;
  
 app.get('/', function(req, res) {
     res.send('Hello from NodeJS  at '+ new Date());
