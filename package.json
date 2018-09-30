@@ -1,6 +1,7 @@
 {
+  "main" :  "./src/server.js",
   "name": "my-package",
-  "main": "./lib/my-package",
+ //"main": "./lib/my-package",
   "version": "0.0.0",
   "description": "A short description of your package",
   "keywords": [],
@@ -15,5 +16,10 @@
   "dependencies": {
     "express": "^4.16.3",
     "nodemailer": "^4.6.5"
-  }
+  },
+ 
+  "scripts" :  { 
+    "start" :  "node server.js" 
+  } 
+  
 }
