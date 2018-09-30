@@ -1,5 +1,5 @@
 {
-  "main" :  "lib/my-package",
+  "main" :  "Server.js",
   "name": "my-package",
 
   "version": "0.0.0",
